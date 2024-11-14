@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mrbce\\source\\repos\\Dadada\\Dadada\\Dadada.csproj": {}
+    "C:\\Users\\mrbce\\OneDrive\\Документы\\GitHub\\Kapec\\CalculateProject\\Dadada\\Dadada.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mrbce\\source\\repos\\Dadada\\Dadada\\Dadada.csproj": {
+    "C:\\Users\\mrbce\\OneDrive\\Документы\\GitHub\\Kapec\\CalculateProject\\Dadada\\Dadada.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mrbce\\source\\repos\\Dadada\\Dadada\\Dadada.csproj",
+        "projectUniqueName": "C:\\Users\\mrbce\\OneDrive\\Документы\\GitHub\\Kapec\\CalculateProject\\Dadada\\Dadada.csproj",
         "projectName": "Dadada",
-        "projectPath": "C:\\Users\\mrbce\\source\\repos\\Dadada\\Dadada\\Dadada.csproj",
+        "projectPath": "C:\\Users\\mrbce\\OneDrive\\Документы\\GitHub\\Kapec\\CalculateProject\\Dadada\\Dadada.csproj",
         "packagesPath": "C:\\Users\\mrbce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mrbce\\source\\repos\\Dadada\\Dadada\\obj\\",
+        "outputPath": "C:\\Users\\mrbce\\OneDrive\\Документы\\GitHub\\Kapec\\CalculateProject\\Dadada\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Visual Studio\\Shared\\NuGetPackages"

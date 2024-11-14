@@ -1,10 +1,10 @@
-﻿float a = 0.0f;
-float b = 0.0f;
+﻿double a = 0.0;
+double b = 0.0;
 string c = "";
 Console.WriteLine("Калькулятор (знак '=' для результата)\n\n");
 
 Console.WriteLine("Введите число:");
-b = Convert.ToInt32(Console.ReadLine());
+b = Convert.ToDouble(Console.ReadLine());
 
 while (true)
 {
@@ -13,7 +13,7 @@ while (true)
     if (c[0] == '-' || c[0] == '+' ||c[0] == '*' || c[0] == '/')
     {
         Console.WriteLine("Введите следующее число: ");
-        a = Convert.ToInt32(Console.ReadLine());
+        a = Convert.ToDouble(Console.ReadLine());
         switch (c[0])
         {
             case '+':
