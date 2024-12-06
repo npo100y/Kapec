@@ -1,38 +1,64 @@
-﻿double a = 0.0;
-double b = 0.0;
-string c = "";
-Console.WriteLine("Калькулятор (знак '=' для результата)\n\n");
+﻿using System.ComponentModel.Design;
 
-Console.WriteLine("Введите число:");
-b = Convert.ToDouble(Console.ReadLine());
-
-while (true)
+class Calculator
 {
-    Console.WriteLine("Введите знак: ");
-    c = Console.ReadLine();
-    if (c[0] == '-' || c[0] == '+' ||c[0] == '*' || c[0] == '/')
+    public static double Calculate(double first, double second, string operation)
     {
-        Console.WriteLine("Введите следующее число: ");
-        a = Convert.ToDouble(Console.ReadLine());
-        switch (c[0])
-        {
-            case '+':
-                b += a;
-                break;
-            case '-':
-                b -= a;
-                break;
-            case '*':
-                b *= a;
-                break;
-            case '/':
-                b /= a;
-                break;
+        switch (operation) {
+            case "+":
+                return first+second;
+            case "-":
+                return first - second;
+            case "*":
+                return first * second;
+            case "/":
+                return first / second;
+            case "%":
+                return first % second;
+            default:
+                return -1;
         }
     }
-    else if (c[0] == '=')
+};
+
+class Program
+{
+    static void Main()
     {
-        Console.WriteLine($"\nРезультат вычислений: {b}");
-        break;
+        int[] mas1 = new int[] { 5, 7, 13, 18, 34 };
+        int[] mas2 = new int[] { 2, 3, 4, 5, 6 };
+        string[] op = new string[] { "+", "-", "*", "/", "%" };
+
+        Console.WriteLine("Вычисления из массивов:\n");
+        for (int i = 0; i < mas1.Length; i++)
+        {
+            Console.WriteLine($"{mas1[i]} {op[i]} {mas2[i]} = {Calculator.Calculate(mas1[i], mas2[i], op[i])}\n");
+
+        }
+
+        while (true)
+        {
+            Console.WriteLine($"Для выхода напишите <Выход>\n");
+
+            Console.WriteLine("Введите первое число: ");
+
+            string temp = Console.ReadLine();
+            if (temp.ToLower() == "выход") { break;}
+
+            double first = double.Parse(temp);
+
+            Console.WriteLine("Введите операцию (+, -, *, /, %): ");
+            string operation = Console.ReadLine();
+            if (operation.ToLower() == "выход") { break;}
+
+            Console.WriteLine("Введите второе число: ");
+            temp = Console.ReadLine();
+            if (temp.ToLower() == "выход") { break;}
+            double second = double.Parse(temp);
+
+            Console.WriteLine($"\n{first} {operation} {second} = {Calculator.Calculate(first, second, operation)}\n");
+
+
+        }
     }
 }
